@@ -11,11 +11,25 @@ import {
     Users,
 } from "lucide-react";
 
+
 export const metadata: Metadata = {
-    title: "Careers | CodeXcrew",
+  title: "Careers & Collaboration",
+  description:
+    "Connect with CodeXcrew and explore opportunities to collaborate. We value curiosity, purposeful engineering, continuous learning and fresh perspectives.",
+
+  alternates: {
+    canonical: "/careers",
+  },
+
+  openGraph: {
+    title: "Careers & Collaboration | CodeXcrew",
     description:
-        "Explore opportunities to connect and collaborate with CodeXcrew. We value curiosity, thoughtful engineering and ambitious ideas.",
+      "Discover the mindset, values and collaborative approach behind CodeXcrew.",
+    url: "/careers",
+    type: "website",
+  },
 };
+
 
 const values = [
     {
