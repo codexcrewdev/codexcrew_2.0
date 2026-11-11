@@ -15,11 +15,25 @@ import {
     RefreshCw,
 } from "lucide-react";
 
+
 export const metadata: Metadata = {
-    title: "Digital Growth | CodeXcrew",
+  title: "Digital Growth & SEO Solutions",
+  description:
+    "Strengthen your business's online presence with search engine optimization, local SEO, digital strategy and analytics solutions from CodeXcrew.",
+
+  alternates: {
+    canonical: "/digital-growth",
+  },
+
+  openGraph: {
+    title: "Digital Growth Solutions | CodeXcrew",
     description:
-        "Build a stronger digital presence with strategic SEO, digital experiences, analytics and growth-focused solutions.",
+      "Build a stronger digital presence through SEO, local search visibility, digital strategy and performance insights.",
+    url: "/digital-growth",
+    type: "website",
+  },
 };
+
 
 const capabilities = [
     {
