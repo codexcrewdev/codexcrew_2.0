@@ -1,11 +1,25 @@
 
+import type { Metadata } from "next";
 import ContactForm from "@/components/contact/ContactForm";
 
-export const metadata = {
-  title: "Contact CodeXcrew | Let's Build What's Next",
+export const metadata: Metadata = {
+  title: "Contact CodeXcrew",
   description:
-    "Have a project in mind? Connect with CodeXcrew to discuss technology solutions, digital products and digital growth.",
+    "Have a project or business challenge in mind? Contact CodeXcrew to discuss custom software, digital products, technology solutions and digital growth.",
+
+  alternates: {
+    canonical: "/contact",
+  },
+
+  openGraph: {
+    title: "Contact CodeXcrew",
+    description:
+      "Start a conversation with CodeXcrew. Tell us about your ideas, project requirements and business goals.",
+    url: "/contact",
+    type: "website",
+  },
 };
+
 
 export default function ContactPage() {
   return (
