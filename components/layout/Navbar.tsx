@@ -7,6 +7,7 @@ const navLinks = [
   { name: "Technology", href: "/technology" },
   { name: "Digital Growth", href: "/digital-growth" },
   { name: "Products", href: "/products" },
+  { name: "Industries", href: "/industries" },
   { name: "About", href: "/about" },
 ];
 

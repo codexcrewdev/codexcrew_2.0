@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import { ArrowUpRight, Layers3 } from "lucide-react";
 import { sanityClient } from "@/lib/sanity/client";
@@ -22,13 +21,12 @@ export default async function SelectedWork() {
   const projects: Project[] = await sanityClient.fetch(
     featuredProjectsQuery,
     {},
-    { next: { revalidate: 60 } }
+    { next: { revalidate: 60 } },
   );
 
   return (
-    <section className="work-section section-padding">
+    <section id="selected-work" className="work-section section-padding">
       <div className="section-container">
-
         <div className="intro-label">
           <span>03</span>
           <span>OUR WORK</span>
@@ -41,9 +39,8 @@ export default async function SelectedWork() {
           </h2>
 
           <p>
-            Every project begins with an idea.
-            We turn business requirements into
-            thoughtful digital experiences.
+            Every project begins with an idea. We turn business requirements
+            into thoughtful digital experiences.
           </p>
         </div>
 
@@ -74,16 +71,12 @@ export default async function SelectedWork() {
                       </div>
                     )}
 
-                    <span className="work-number">
-                      0{index + 1}
-                    </span>
+                    <span className="work-number">0{index + 1}</span>
                   </div>
 
                   <div className="work-card-content">
                     <div className="work-meta">
-                      <span>
-                        {project.category || "Digital Experience"}
-                      </span>
+                      <span>{project.category || "Digital Experience"}</span>
 
                       {project.status === "live" && (
                         <span className="work-live">
@@ -98,11 +91,9 @@ export default async function SelectedWork() {
 
                     <div className="work-footer">
                       <div className="work-tags">
-                        {(project.services || [])
-                          .slice(0, 3)
-                          .map((service) => (
-                            <span key={service}>{service}</span>
-                          ))}
+                        {(project.services || []).slice(0, 3).map((service) => (
+                          <span key={service}>{service}</span>
+                        ))}
                       </div>
 
                       {project.website && (
@@ -130,9 +121,7 @@ export default async function SelectedWork() {
 
         <div className="work-bottom">
           <div>
-            <span className="work-bottom-label">
-              HAVE A PROJECT IN MIND?
-            </span>
+            <span className="work-bottom-label">HAVE A PROJECT IN MIND?</span>
 
             <h3>Let&apos;s build something meaningful.</h3>
           </div>
@@ -142,7 +131,6 @@ export default async function SelectedWork() {
             <ArrowUpRight size={17} />
           </Link>
         </div>
-
       </div>
     </section>
   );
