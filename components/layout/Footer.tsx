@@ -38,7 +38,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <span>© {new Date().getFullYear()} CodeXcrew. All rights reserved.</span>
+        <span>© 2026 CodeXcrew. All rights reserved.</span>
         <span>Built with purpose.</span>
       </div>
     </footer>
