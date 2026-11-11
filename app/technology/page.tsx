@@ -15,11 +15,25 @@ import {
     Lightbulb,
 } from "lucide-react";
 
+
 export const metadata: Metadata = {
-    title: "Technology | CodeXcrew",
+  title: "Technology Solutions",
+  description:
+    "Explore CodeXcrew's technology capabilities, including custom software development, web applications, e-commerce solutions and SaaS product engineering.",
+
+  alternates: {
+    canonical: "/technology",
+  },
+
+  openGraph: {
+    title: "Technology Solutions | CodeXcrew",
     description:
-        "We design and engineer digital products, custom software, web applications and scalable technology solutions.",
+      "Discover how CodeXcrew turns ideas into digital products, custom software and purposeful technology solutions.",
+    url: "/technology",
+    type: "website",
+  },
 };
+
 
 const capabilities = [
     {
