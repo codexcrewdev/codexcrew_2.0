@@ -10,11 +10,25 @@ import {
     Sparkles,
 } from "lucide-react";
 
+
 export const metadata: Metadata = {
-    title: "Our Products | CodeXcrew",
+  title: "Digital Products",
+  description:
+    "Explore CodeXcrew's upcoming digital products. Discover our approach to purposeful innovation, thoughtful engineering and technology built to solve real-world problems.",
+
+  alternates: {
+    canonical: "/products",
+  },
+
+  openGraph: {
+    title: "Digital Products | CodeXcrew",
     description:
-        "Discover what's next from CodeXcrew. We're building thoughtful digital products designed to solve real-world problems.",
+      "Discover what's next from CodeXcrew. Purposeful digital products built to solve meaningful problems.",
+    url: "/products",
+    type: "website",
+  },
 };
+
 
 export default function ProductsPage() {
     return (
