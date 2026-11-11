@@ -16,10 +16,24 @@ import {
   Network,
 } from "lucide-react";
 
-export const metadata = {
-  title: "About CodeXcrew | Think Beyond. Build What's Next.",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About CodeXcrew",
   description:
-    "Discover CodeXcrew, a remote-first technology group focused on building digital products, engineering purposeful solutions and enabling digital growth.",
+    "Get to know CodeXcrew, a technology group focused on building digital products, engineering purposeful software solutions and enabling digital growth.",
+
+  alternates: {
+    canonical: "/about",
+  },
+
+  openGraph: {
+    title: "About CodeXcrew",
+    description:
+      "Discover our vision, principles and approach to building purposeful technology and digital experiences.",
+    url: "/about",
+    type: "website",
+  },
 };
 
 const principles = [
