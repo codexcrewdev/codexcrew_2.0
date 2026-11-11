@@ -15,11 +15,25 @@ import {
     Target,
 } from "lucide-react";
 
+
 export const metadata: Metadata = {
-    title: "Industries | CodeXcrew",
+  title: "Industries We Serve",
+  description:
+    "Explore CodeXcrew's technology and digital growth solutions for agriculture, food, retail, e-commerce, manufacturing, education, travel and professional services.",
+
+  alternates: {
+    canonical: "/industries",
+  },
+
+  openGraph: {
+    title: "Industries We Serve | CodeXcrew",
     description:
-        "Explore how CodeXcrew approaches technology and digital growth across agriculture, retail, manufacturing, education, travel and professional services.",
+      "Discover industry-focused technology solutions and digital experiences built around business needs.",
+    url: "/industries",
+    type: "website",
+  },
 };
+
 
 const industries = [
     {
