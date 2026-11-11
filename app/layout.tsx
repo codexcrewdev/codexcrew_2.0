@@ -16,12 +16,55 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://codexcrew.vercel.app"),
+
+  applicationName: "CodeXcrew",
+
   title: {
-    default: "CodeXcrew | Engineering What's Next",
+    default: "CodeXcrew — Technology Group | Think Beyond. Build What's Next.",
     template: "%s | CodeXcrew",
   },
+
   description:
-    "CodeXcrew is a technology company building digital products and delivering technology solutions for businesses.",
+    "CodeXcrew is a technology group building digital products, custom software, web applications and digital growth solutions for modern businesses.",
+
+  keywords: [
+    "CodeXcrew",
+    "technology group",
+    "software development",
+    "custom software development",
+    "web applications",
+    "digital products",
+    "digital growth",
+    "ecommerce solutions",
+    "technology solutions",
+  ],
+
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "/",
+    siteName: "CodeXcrew",
+    title: "CodeXcrew — Technology Group",
+    description:
+      "Think Beyond. Build What's Next. Explore technology products and digital growth solutions by CodeXcrew.",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "CodeXcrew — Technology Group",
+    description:
+      "Think Beyond. Build What's Next. Technology products and digital growth solutions.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
 };
 
 export default function RootLayout({
