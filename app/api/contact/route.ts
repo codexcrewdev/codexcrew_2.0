@@ -125,6 +125,7 @@ export async function POST(request: Request) {
     if (!result.success) {
       throw new Error("Google Apps Script could not process the enquiry.");
     }
+    
 
     return NextResponse.json({ success: true });
   } catch (error) {
