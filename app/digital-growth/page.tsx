@@ -13,52 +13,85 @@ import {
     Compass,
     BarChart3,
     RefreshCw,
+    Check,
 } from "lucide-react";
 
-
 export const metadata: Metadata = {
-  title: "Digital Growth & SEO Solutions",
-  description:
-    "Strengthen your business's online presence with search engine optimization, local SEO, digital strategy and analytics solutions from CodeXcrew.",
-
-  alternates: {
-    canonical: "/digital-growth",
-  },
-
-  openGraph: {
-    title: "Digital Growth Solutions | CodeXcrew",
+    title: "Digital Growth & SEO Solutions",
     description:
-      "Build a stronger digital presence through SEO, local search visibility, digital strategy and performance insights.",
-    url: "/digital-growth",
-    type: "website",
-  },
+        "Strengthen your business's online presence with search engine optimization, local SEO, digital strategy and analytics solutions from CodeXcrew.",
+    alternates: {
+        canonical: "/digital-growth",
+    },
+    openGraph: {
+        title: "Digital Growth Solutions | CodeXcrew",
+        description:
+            "Build a stronger digital presence through SEO, local search visibility, digital strategy and performance insights.",
+        url: "/digital-growth",
+        type: "website",
+    },
 };
-
 
 const capabilities = [
     {
         icon: Search,
         title: "Search Engine Optimization",
         description:
-            "Improve your search visibility through technical SEO, on-page optimization and a structured search strategy.",
+            "Improve your website's visibility in search engines and help the right audience discover your business.",
+        solutions: [
+            "Technical SEO audits",
+            "On-page SEO optimization",
+            "Keyword research and mapping",
+            "Website structure and content optimization",
+            "Search Console setup and monitoring",
+        ],
+        outcome:
+            "Build a stronger search foundation and improve your opportunities to reach people actively looking for your services.",
     },
     {
         icon: MapPin,
-        title: "Local Search Presence",
+        title: "Local SEO & Google Business Profile",
         description:
-            "Strengthen how your business appears in local search with Google Business Profile and local SEO foundations.",
+            "Help customers discover your business when they search for relevant products and services in your area.",
+        solutions: [
+            "Google Business Profile setup",
+            "Business information optimization",
+            "Local keyword targeting",
+            "Business category and service optimization",
+            "Local search visibility monitoring",
+        ],
+        outcome:
+            "Make it easier for nearby customers to find your business, understand what you offer and get in touch.",
     },
     {
-        icon: ChartNoAxesCombined,
+        icon: Target,
         title: "Digital Strategy",
         description:
-            "Build a clearer digital direction through audience understanding, positioning and practical growth planning.",
+            "Create a focused digital direction that connects your business goals with the right online channels.",
+        solutions: [
+            "Digital presence assessment",
+            "Audience and competitor research",
+            "Brand positioning guidance",
+            "Digital channel planning",
+            "Website and conversion improvement recommendations",
+        ],
+        outcome:
+            "Make more informed digital decisions with a clear direction, relevant priorities and actionable recommendations.",
     },
     {
         icon: BarChart3,
-        title: "Analytics & Insights",
+        title: "Analytics & Performance Insights",
         description:
-            "Understand website performance and customer behaviour with meaningful analytics and measurable insights.",
+            "Understand how people discover and interact with your website through meaningful performance data.",
+        solutions: [
+            "Google Analytics 4 setup",
+            "Google Search Console integration",
+            "Website traffic monitoring",
+            "User behaviour and engagement analysis",
+            "Performance reports and insights",
+        ],
+        outcome:
+            "Understand what's working, identify improvement opportunities and make decisions based on meaningful data.",
     },
 ];
 
@@ -233,12 +266,101 @@ export default function DigitalGrowthPage() {
 
                                     <p>{item.description}</p>
 
-                                    <span className="dg-card-decoration">
-                                        <ArrowUpRight size={20} />
-                                    </span>
+                                    <div
+                                        style={{
+                                            marginTop: "24px",
+                                            paddingTop: "20px",
+                                            borderTop: "1px solid rgba(255,255,255,0.09)",
+                                        }}
+                                    >
+                                        <h4
+                                            style={{
+                                                fontSize: "14px",
+                                                fontWeight: 600,
+                                                marginBottom: "14px",
+                                                color: "#f5f3ff",
+                                            }}
+                                        >
+                                            What we can do
+                                        </h4>
+
+                                        <ul
+                                            style={{
+                                                listStyle: "none",
+                                                padding: 0,
+                                                margin: 0,
+                                                display: "grid",
+                                                gap: "12px",
+                                            }}
+                                        >
+                                            {item.solutions.map((solution) => (
+                                                <li
+                                                    key={solution}
+                                                    style={{
+                                                        display: "flex",
+                                                        alignItems: "flex-start",
+                                                        gap: "10px",
+                                                        color: "#a5a5b3",
+                                                        fontSize: "14px",
+                                                        lineHeight: 1.6,
+                                                    }}
+                                                >
+                                                    <Check
+                                                        size={16}
+                                                        color="#a78bfa"
+                                                        style={{
+                                                            flexShrink: 0,
+                                                            marginTop: "3px",
+                                                        }}
+                                                    />
+                                                    {solution}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+
+                                    <p
+                                        style={{
+                                            marginTop: "22px",
+                                            paddingTop: "18px",
+                                            borderTop: "1px solid rgba(255,255,255,0.09)",
+                                            color: "#c4b5fd",
+                                            fontSize: "14px",
+                                            lineHeight: 1.7,
+                                        }}
+                                    >
+                                        {item.outcome}
+                                    </p>
                                 </article>
                             );
                         })}
+                    </div>
+
+                    <div
+                        style={{
+                            textAlign: "center",
+                            marginTop: "52px",
+                        }}
+                    >
+                        <p
+                            style={{
+                                color: "#a5a5b3",
+                                fontSize: "15px",
+                                marginBottom: "20px",
+                                lineHeight: 1.7,
+                            }}
+                        >
+                            Not sure what your business needs?
+                            Let's discuss your digital goals.
+                        </p>
+
+                        <Link
+                            href="/contact"
+                            className="dg-button dg-button-primary"
+                        >
+                            Discuss your requirements
+                            <ArrowUpRight size={18} />
+                        </Link>
                     </div>
                 </div>
             </section>
@@ -348,13 +470,13 @@ export default function DigitalGrowthPage() {
                     </span>
 
                     <h2>
-                        Let&apos;s create a stronger digital presence.
+                        Let's create a stronger digital presence.
                     </h2>
 
                     <p>
                         Tell us where your business is today and
-                        where you want it to go. Let&apos;s explore
-                        what&apos;s possible.
+                        where you want it to go. Let's explore
+                        what's possible.
                     </p>
 
                     <Link
@@ -370,4 +492,3 @@ export default function DigitalGrowthPage() {
         </main>
     );
 }
-

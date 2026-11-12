@@ -13,52 +13,87 @@ import {
     Rocket,
     RefreshCw,
     Lightbulb,
+    Check,
 } from "lucide-react";
 
+// import "./technology.css";
 
 export const metadata: Metadata = {
-  title: "Technology Solutions",
-  description:
-    "Explore CodeXcrew's technology capabilities, including custom software development, web applications, e-commerce solutions and SaaS product engineering.",
-
-  alternates: {
-    canonical: "/technology",
-  },
-
-  openGraph: {
-    title: "Technology Solutions | CodeXcrew",
+    title: "Technology Solutions",
     description:
-      "Discover how CodeXcrew turns ideas into digital products, custom software and purposeful technology solutions.",
-    url: "/technology",
-    type: "website",
-  },
+        "Explore CodeXcrew's technology capabilities, including custom software development, web applications, e-commerce solutions and SaaS product engineering.",
+    alternates: {
+        canonical: "/technology",
+    },
+    openGraph: {
+        title: "Technology Solutions | CodeXcrew",
+        description:
+            "Discover how CodeXcrew turns ideas into digital products, custom software and purposeful technology solutions.",
+        url: "/technology",
+        type: "website",
+    },
 };
-
 
 const capabilities = [
     {
         icon: Code2,
         title: "Custom Software Development",
         description:
-            "Purpose-built software designed around your business processes, requirements and long-term goals.",
+            "Purpose-built software designed around your business processes, operational needs and long-term goals.",
+        solutions: [
+            "Business management systems",
+            "Admin dashboards and control panels",
+            "Workflow and process management",
+            "API development and integrations",
+            "Custom business tools",
+        ],
+        outcome:
+            "Replace disconnected tools and manual processes with software designed around how your business works.",
     },
     {
         icon: Layers3,
-        title: "Web Applications",
+        title: "Web Application Development",
         description:
-            "Modern, responsive and scalable web applications that turn complex ideas into practical digital experiences.",
+            "Modern, responsive web platforms that simplify complex operations and create better digital experiences.",
+        solutions: [
+            "Customer and business portals",
+            "Booking and reservation platforms",
+            "Listing and marketplace platforms",
+            "Interactive dashboards",
+            "Custom web applications",
+        ],
+        outcome:
+            "Give customers and teams a central place to access services, information and essential business functions.",
     },
     {
         icon: ShoppingBag,
         title: "E-commerce Solutions",
         description:
-            "Digital commerce experiences built to simplify product discovery, customer journeys and online operations.",
+            "Thoughtfully engineered online shopping experiences that connect products, customers and business operations.",
+        solutions: [
+            "Custom online stores",
+            "Product catalogues and discovery",
+            "Shopping carts and checkout",
+            "Payment gateway integration",
+            "Order management systems",
+        ],
+        outcome:
+            "Build a digital storefront that makes product discovery, purchasing and order management easier.",
     },
     {
         icon: Boxes,
-        title: "SaaS & Digital Products",
+        title: "SaaS & Digital Product Engineering",
         description:
-            "From early concepts to launch-ready platforms, we help shape and engineer products built for growth.",
+            "Turn promising ideas into useful digital products, from early concepts to launch-ready platforms.",
+        solutions: [
+            "SaaS MVP development",
+            "Subscription-based platforms",
+            "Multi-user applications",
+            "Product dashboards",
+            "Product development and iteration",
+        ],
+        outcome:
+            "Move from idea to a working product with a foundation designed for future improvements and growth.",
     },
 ];
 
@@ -222,12 +257,101 @@ export default function TechnologyPage() {
 
                                     <p>{item.description}</p>
 
-                                    <span className="tech-card-decoration">
-                                        <ArrowUpRight size={20} />
-                                    </span>
+                                    <div
+                                        style={{
+                                            marginTop: "24px",
+                                            paddingTop: "20px",
+                                            borderTop: "1px solid rgba(255,255,255,0.09)",
+                                        }}
+                                    >
+                                        <h4
+                                            style={{
+                                                fontSize: "14px",
+                                                fontWeight: 600,
+                                                marginBottom: "14px",
+                                                color: "#f5f3ff",
+                                            }}
+                                        >
+                                            What we can build
+                                        </h4>
+
+                                        <ul
+                                            style={{
+                                                listStyle: "none",
+                                                padding: 0,
+                                                margin: 0,
+                                                display: "grid",
+                                                gap: "12px",
+                                            }}
+                                        >
+                                            {item.solutions.map((solution) => (
+                                                <li
+                                                    key={solution}
+                                                    style={{
+                                                        display: "flex",
+                                                        alignItems: "flex-start",
+                                                        gap: "10px",
+                                                        color: "#a5a5b3",
+                                                        fontSize: "14px",
+                                                        lineHeight: 1.6,
+                                                    }}
+                                                >
+                                                    <Check
+                                                        size={16}
+                                                        color="#a78bfa"
+                                                        style={{
+                                                            flexShrink: 0,
+                                                            marginTop: "3px",
+                                                        }}
+                                                    />
+                                                    {solution}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+
+                                    <p
+                                        style={{
+                                            marginTop: "22px",
+                                            paddingTop: "18px",
+                                            borderTop: "1px solid rgba(255,255,255,0.09)",
+                                            color: "#c4b5fd",
+                                            fontSize: "14px",
+                                            lineHeight: 1.7,
+                                        }}
+                                    >
+                                        {item.outcome}
+                                    </p>
                                 </article>
                             );
                         })}
+                    </div>
+
+                    <div
+                        style={{
+                            textAlign: "center",
+                            marginTop: "52px",
+                        }}
+                    >
+                        <p
+                            style={{
+                                color: "#a5a5b3",
+                                fontSize: "15px",
+                                marginBottom: "20px",
+                                lineHeight: 1.7,
+                            }}
+                        >
+                            Have a specific requirement that isn't listed?
+                            Let's discuss what you have in mind.
+                        </p>
+
+                        <Link
+                            href="/contact"
+                            className="tech-button tech-button-primary"
+                        >
+                            Discuss your project
+                            <ArrowUpRight size={18} />
+                        </Link>
                     </div>
                 </div>
             </section>
