@@ -18,6 +18,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://codexcrew.vercel.app"),
 
+  verification: {
+  google: "v4pEswtzSrBykz3uH9R0Z0Q9EGdFBdBkSnmxbM5kUes",
+},
+
   applicationName: "CodeXcrew",
 
   title: {
